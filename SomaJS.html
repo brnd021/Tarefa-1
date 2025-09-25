@@ -2,23 +2,30 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Exemplo de JavaScript</title>
+    <title>Exemplo de JavaScript com Entrada de Usuário</title>
 </head>
 <body>
     <h1>Meu primeiro script em JS</h1>
+    <p>Insira dois números para somar:</p>
+    <div id="output"></div>
     
     <script>
- 
         let mensagem = "Olá, Mundo! Bem-vindo ao JavaScript.";
-        
-
         console.log(mensagem);
         
-      
-        let numero1 = 5;
-        let numero2 = 3;
-        let soma = numero1 + numero2;
-        console.log("A soma é: " + soma);  // Resultado: 8
+        
+        let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+        let numero2 = parseFloat(prompt("Digite o segundo número:"));
+        
+        
+        if (isNaN(numero1) || isNaN(numero2)) {
+            console.log("Por favor, insira números válidos.");
+            document.getElementById("output").innerText = "Por favor, insira números válidos.";
+        } else {
+            let soma = numero1 + numero2;
+            console.log("A soma é: " + soma);
+            document.getElementById("output").innerText = "A soma de " + numero1 + " e " + numero2 + " é: " + soma;
+        }
     </script>
 </body>
 </html>
