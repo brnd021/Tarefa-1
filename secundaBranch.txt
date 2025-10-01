@@ -1,1 +1,5 @@
 Alteracao na main da branch secundaria
+
+Alteracao para secundo commit
+
+Conflito corrigido 
